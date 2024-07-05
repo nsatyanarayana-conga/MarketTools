@@ -12,18 +12,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="Data\LibraryObjectId2.txt">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Data\LibraryObjectId.txt">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Data\LibraryObjectId3.txt">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Data\LibraryObjectId4.txt">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
     <None Update="StockData\bankofindia_smallcap.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
