@@ -1,0 +1,11 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/DailyTools/.vs
+/DailyTools/DailyTools/bin/Debug/net8.0
+/DailyTools/DailyTools/Data/LibraryObjectId.txt
+/DailyTools/DailyTools/Data/LibraryObjectId2.txt
+/DailyTools/DailyTools/Data/LibraryObjectId3.txt
+/DailyTools/DailyTools/Data/LibraryObjectId4.txt
+/DailyTools/DailyTools/obj
