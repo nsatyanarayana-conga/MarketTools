@@ -46,6 +46,24 @@ namespace DailyTools
         public static string MF_KOTAK = "Kotak";
         public static string MF_KOTAK_FILENAME = "kotak_smallcap.txt";
 
+        public static string MF_SUNDARAM = "Sundaram";
+        public static string MF_SUNDARAM_FILENAME = "sundaram_smallcap.txt";
+
+        public static string MF_DSP = "Dsp";
+        public static string MF_DSP_FILENAME = "dsp_smallcap.txt";
+
+        public static string MF_UNION = "Union";
+        public static string MF_UNION_FILENAME = "union_smallcap.txt";
+
+        public static string MF_AXISBANK = "AxisBank";
+        public static string MF_AXISBANK_FILENAME = "axisbank_smallcap.txt";
+
+        public static string MF_SBI = "Sbi";
+        public static string MF_SBI_FILENAME = "sbi_smallcap.txt";
+
+        public static string MF_ADITYABIRLA = "AdityaBirla";
+        public static string MF_ADITYABIRLA_FILENAME = "adityabirla_smallcap.txt";
+
         public static string GetFilePath(string dir, string filename)
         {
             return $"{dir}//{filename}";

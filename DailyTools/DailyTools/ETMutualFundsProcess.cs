@@ -23,6 +23,12 @@ namespace DailyTools
             mutualFunds.Add(new MutualFund { Name = MF_HDFC, FileName = GetFilePath(DATA_ROOT_DIR, MF_HDFC_FILENAME) });
             mutualFunds.Add(new MutualFund { Name = MF_ICICIPRUDENTIAL, FileName = GetFilePath(DATA_ROOT_DIR, MF_ICICIPRUDENTIAL_FILENAME) });
             mutualFunds.Add(new MutualFund { Name = MF_KOTAK, FileName = GetFilePath(DATA_ROOT_DIR, MF_KOTAK_FILENAME) });
+            mutualFunds.Add(new MutualFund { Name = MF_ADITYABIRLA, FileName = GetFilePath(DATA_ROOT_DIR, MF_ADITYABIRLA_FILENAME) });
+            mutualFunds.Add(new MutualFund { Name = MF_AXISBANK, FileName = GetFilePath(DATA_ROOT_DIR, MF_AXISBANK_FILENAME) });
+            mutualFunds.Add(new MutualFund { Name = MF_DSP, FileName = GetFilePath(DATA_ROOT_DIR, MF_DSP_FILENAME) });
+            mutualFunds.Add(new MutualFund { Name = MF_SBI, FileName = GetFilePath(DATA_ROOT_DIR, MF_SBI_FILENAME) });
+            mutualFunds.Add(new MutualFund { Name = MF_SUNDARAM, FileName = GetFilePath(DATA_ROOT_DIR, MF_SUNDARAM_FILENAME) });
+            mutualFunds.Add(new MutualFund { Name = MF_UNION, FileName = GetFilePath(DATA_ROOT_DIR, MF_UNION_FILENAME) });
 
             foreach (var fund in mutualFunds)
             {
@@ -208,7 +214,7 @@ namespace DailyTools
 
         private static ETRawDataModel ProcessETRawDataModel(string filePath)
         {
-            string sectors = "Capital Goods,Financial,Automobile,Diversified,Construction,Services,Healthcare,Consumer Staples,Textiles,Technology,Metals, Pharmaceuticals,Chemicals Ltd,Materials";
+            string sectors = "Capital Goods,Financial,Automobile,Diversified,Construction,Services,Healthcare,Consumer Staples,Textiles,Technology,Metals, Pharmaceuticals,Chemicals Ltd,Materials, Others";
 
             ETRawDataModel eTRawDataModel = new ETRawDataModel();
             string[] sectorArray = sectors.Split(",");

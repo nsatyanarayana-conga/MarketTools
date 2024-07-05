@@ -36,6 +36,24 @@
     <None Update="StockData\hdfc_smallcap.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Update="StockData\dsp_smallcap.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="StockData\adityabirla_smallcap.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="StockData\union_smallcap.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="StockData\axisbank_smallcap.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="StockData\sbi_smallcap.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="StockData\sundaram_smallcap.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="StockData\tata_smallcap.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
