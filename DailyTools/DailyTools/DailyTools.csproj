@@ -12,58 +12,58 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="StockData\bankofindia_smallcap.txt">
+    <None Update="StockData\SmallCap\bankofindia_smallcap.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="StockData\canararobeco_smallcap.txt">
+    <None Update="StockData\SmallCap\canararobeco_smallcap.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="StockData\franklin_smallcap.txt">
+    <None Update="StockData\SmallCap\franklin_smallcap.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="StockData\edelwise_smallcap.txt">
+    <None Update="StockData\SmallCap\edelwise_smallcap.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="StockData\invesco_smallcap.txt">
+    <None Update="StockData\SmallCap\invesco_smallcap.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="StockData\iciciprudential_smallcap.txt">
+    <None Update="StockData\SmallCap\iciciprudential_smallcap.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="StockData\kotak_smallcap.txt">
+    <None Update="StockData\SmallCap\kotak_smallcap.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="StockData\hdfc_smallcap.txt">
+    <None Update="StockData\SmallCap\hdfc_smallcap.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="StockData\dsp_smallcap.txt">
+    <None Update="StockData\SmallCap\dsp_smallcap.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="StockData\adityabirla_smallcap.txt">
+    <None Update="StockData\SmallCap\adityabirla_smallcap.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="StockData\union_smallcap.txt">
+    <None Update="StockData\SmallCap\union_smallcap.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="StockData\axisbank_smallcap.txt">
+    <None Update="StockData\SmallCap\axisbank_smallcap.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="StockData\sbi_smallcap.txt">
+    <None Update="StockData\SmallCap\sbi_smallcap.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="StockData\sundaram_smallcap.txt">
+    <None Update="StockData\SmallCap\sundaram_smallcap.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="StockData\tata_smallcap.txt">
+    <None Update="StockData\SmallCap\tata_smallcap.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="StockData\hsbc_smallcap.txt">
+    <None Update="StockData\SmallCap\hsbc_smallcap.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="StockData\nippon_smallcap.txt">
+    <None Update="StockData\SmallCap\nippon_smallcap.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="StockData\quantdata_smallcap.txt">
+    <None Update="StockData\SmallCap\quantdata_smallcap.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>

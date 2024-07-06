@@ -8,7 +8,7 @@ namespace DailyTools
 {
     public static class Constants
     {
-        public static string DATA_ROOT_DIR = "StockData";
+        public static string DATA_ROOT_DIR = "StockData\\SmallCap";
 
         public static string MF_NIPPON = "Nippon";
         public static string MF_NIPPON_FILENAME = $"nippon_smallcap.txt";
