@@ -208,25 +208,48 @@ namespace DailyTools
         {
             IList<Stock> stocks = new List<Stock>();
 
-            foreach (var item in rawdata.SectorSegregate)
+            if(UseTabSeperator)
             {
-                foreach (var item1 in item.Value)
+                foreach (var item in rawdata.SectorSegregate)
                 {
-                    string[] lines = item1.Split(item.Key);
-
-                    if (lines.Length > 1)
+                    foreach (var item1 in item.Value)
                     {
-                        Stock stock = new Stock
+                        string[] lines = item1.Split("\t");
+
+                        if (lines.Length > 3)
                         {
-                            CompanyName = lines[0].Trim(),
-                            Sector = item.Key,
-                            HoldingPercent = GetHoldingPercent(lines[1])
-                        };
-                        stocks.Add(stock);
+                            Stock stock = new Stock
+                            {
+                                CompanyName = lines[0].Trim(),
+                                Sector = lines[1].Trim(),
+                                HoldingPercent = lines[2].Trim()
+                            };
+                            stocks.Add(stock);
+                        }
                     }
                 }
             }
+            else
+            {
+                foreach (var item in rawdata.SectorSegregate)
+                {
+                    foreach (var item1 in item.Value)
+                    {
+                        string[] lines = item1.Split(item.Key);
 
+                        if (lines.Length > 1)
+                        {
+                            Stock stock = new Stock
+                            {
+                                CompanyName = lines[0].Trim(),
+                                Sector = item.Key,
+                                HoldingPercent = GetHoldingPercent(lines[1])
+                            };
+                            stocks.Add(stock);
+                        }
+                    }
+                }
+            }
             return stocks;
         }
 
