@@ -1,5 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using DailyTools;
+using DailyTools.Services;
 using System.Reflection;
 
 Console.WriteLine("Hello, World!");
@@ -12,9 +13,8 @@ string[] str = sectors.Split(',');
 //    //Console.WriteLine($"sectornames.Add(\"{item}\");");
 //}
 
-ETMutualFundsProcess.UseTabSeperator = true;
-ETMutualFundsProcess.InitData();
-ETMutualFundsProcess.ProcessETMoneyData();
+IMutualFundService mutualFundService = new ETMoneyMutualFundService(true);
+mutualFundService.ProcessETMoneyData();
 
 //string path = "C:\\rlscode\\dev\\Conga.Revenue.Config.Rajan\\Conga.Revenue.Config.DataTool\\PublishClasses\\GenSrc\\TN_ORG_55debe94_f9c8_49d4_8447_158bda7781ac";
 
