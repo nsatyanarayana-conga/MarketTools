@@ -69,52 +69,53 @@ namespace DailyTools
 
             //GenerateReport(mutualFunds);
             //GenerateReportFundWise(mutualFunds);
-            //string sctorName = "Healthcare";
+            //GenerateSectorReport(mutualFunds);
 
-            foreach (var sctorName in SectorNames)
-            {
-                GenerateSectorReport(mutualFunds, sctorName);
-            }
+
 
         }
 
-        private static void GenerateSectorReport(IList<MutualFund> mutualFunds, string sectorName)
+        private static void GenerateSectorReport(IList<MutualFund> mutualFunds)
         {
-            IDictionary<string, Stock> stockMap = new Dictionary<string, Stock>();
-            List<Stock> sectorStocks = new List<Stock>();
-
-            foreach (var fund in mutualFunds)
+            foreach (var sectorName in SectorNames)
             {
-                var sectors = fund.Stocks.Where(st => st.Sector.Equals(sectorName)).ToList();
+                IDictionary<string, Stock> stockMap = new Dictionary<string, Stock>();
+                List<Stock> sectorStocks = new List<Stock>();
 
-                foreach (var stock in sectors.ToList())
+                foreach (var fund in mutualFunds)
                 {
-                    
-                    if(!stockMap.ContainsKey(stock.CompanyName))
+                    var sectors = fund.Stocks.Where(st => st.Sector.Equals(sectorName)).ToList();
+
+                    foreach (var stock in sectors.ToList())
                     {
-                        stockMap[stock.CompanyName] = stock;
-                        stock.FundNames.Add(fund.Name);
-                    }
-                    else
-                    {
-                        stockMap[stock.CompanyName].FundNames.Add(fund.Name);
+
+                        if (!stockMap.ContainsKey(stock.CompanyName))
+                        {
+                            stockMap[stock.CompanyName] = stock;
+                            stock.FundNames.Add(fund.Name);
+                        }
+                        else
+                        {
+                            stockMap[stock.CompanyName].FundNames.Add(fund.Name);
+                        }
                     }
                 }
-            }
 
-            string dir_path = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), @$"Sector");
+                string dir_path = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), @$"Sector");
 
-            if(!Directory.Exists(dir_path))
-            {
-                Directory.CreateDirectory(dir_path);
-            }
-            string output = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), @$"Sector\{sectorName}_report.txt");
-            if (File.Exists(output))
-            {
-                File.Delete(output);
-            }
+                if (!Directory.Exists(dir_path))
+                {
+                    Directory.CreateDirectory(dir_path);
+                }
+                string output = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), @$"Sector\{sectorName}_report.txt");
+                if (File.Exists(output))
+                {
+                    File.Delete(output);
+                }
 
-            File.WriteAllText(output, JsonConvert.SerializeObject(stockMap.Values.OrderByDescending(s => s.FundNames.Count)));
+                File.WriteAllText(output, JsonConvert.SerializeObject(stockMap.Values.OrderByDescending(s => s.FundNames.Count)));
+            }
+            
         }
 
         private static void GenerateReportFundWise(IList<MutualFund> mutualFunds)
