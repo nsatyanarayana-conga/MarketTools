@@ -33,7 +33,9 @@ sectornames.Add("Insurance");
 foreach (var item in str)
 {
     //Console.WriteLine($"sectornames.Add(\"{item}\");");
-}//ToolUtil.DisplayBundleIds();
+}
+
+
 ETMutualFundsProcess.ProcessETMoneyData();
 
 //string path = "C:\\rlscode\\dev\\Conga.Revenue.Config.Rajan\\Conga.Revenue.Config.DataTool\\PublishClasses\\GenSrc\\TN_ORG_55debe94_f9c8_49d4_8447_158bda7781ac";

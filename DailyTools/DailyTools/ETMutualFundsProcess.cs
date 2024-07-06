@@ -8,6 +8,35 @@ namespace DailyTools
 {
     public static class ETMutualFundsProcess
     {
+        public static bool UseTabSeperator = false;
+        public static IList<string> SectorNames = new List<string>();
+
+        public static void InitData()
+        {
+            SectorNames.Add("Capital Goods");
+            SectorNames.Add("Financial");
+            SectorNames.Add("Automobile");
+            SectorNames.Add("Diversified");
+            SectorNames.Add("Construction");
+            SectorNames.Add("Services");
+            SectorNames.Add("Healthcare");
+            SectorNames.Add("Consumer Staples");
+            SectorNames.Add("Textiles");
+            SectorNames.Add("Technology");
+            SectorNames.Add("Metals");
+            SectorNames.Add("Pharmaceuticals");
+            SectorNames.Add("Chemicals Ltd");
+            SectorNames.Add("Materials");
+            SectorNames.Add("Others");
+            SectorNames.Add("Chemicals");
+            SectorNames.Add("Energy");
+            SectorNames.Add("Communication");
+            SectorNames.Add("Consumer Discretionary");
+            SectorNames.Add("Consumer Electricals Ltd");
+            SectorNames.Add("Insurance");
+        }
+
+
         public static void ProcessETMoneyData()
         {
             IList<MutualFund> mutualFunds = new List<MutualFund>();
@@ -41,30 +70,8 @@ namespace DailyTools
             //GenerateReport(mutualFunds);
             //GenerateReportFundWise(mutualFunds);
             //string sctorName = "Healthcare";
-            IList<string> sectornames = new List<string>();
-            sectornames.Add("Capital Goods");
-            sectornames.Add("Financial");
-            sectornames.Add("Automobile");
-            sectornames.Add("Diversified");
-            sectornames.Add("Construction");
-            sectornames.Add("Services");
-            sectornames.Add("Healthcare");
-            sectornames.Add("Consumer Staples");
-            sectornames.Add("Textiles");
-            sectornames.Add("Technology");
-            sectornames.Add("Metals");
-            sectornames.Add("Pharmaceuticals");
-            sectornames.Add("Chemicals Ltd");
-            sectornames.Add("Materials");
-            sectornames.Add("Others");
-            sectornames.Add("Chemicals");
-            sectornames.Add("Energy");
-            sectornames.Add("Communication");
-            sectornames.Add("Consumer Discretionary");
-            sectornames.Add("Consumer Electricals Ltd");
-            sectornames.Add("Insurance");
 
-            foreach (var sctorName in sectornames)
+            foreach (var sctorName in SectorNames)
             {
                 GenerateSectorReport(mutualFunds, sctorName);
             }
@@ -241,28 +248,7 @@ namespace DailyTools
         {
             //string sectors = "Capital Goods,Financial,Automobile,Diversified,Construction,Services,Healthcare,Consumer Staples,Textiles,Technology,Metals, Pharmaceuticals,Chemicals Ltd,Materials, Others";
 
-            IList<string> sectornames = new List<string>();
-            sectornames.Add("Capital Goods");
-            sectornames.Add("Financial");
-            sectornames.Add("Automobile");
-            sectornames.Add("Diversified");
-            sectornames.Add("Construction");
-            sectornames.Add("Services");
-            sectornames.Add("Healthcare");
-            sectornames.Add("Consumer Staples");
-            sectornames.Add("Textiles");
-            sectornames.Add("Technology");
-            sectornames.Add("Metals");
-            sectornames.Add("Pharmaceuticals");
-            sectornames.Add("Chemicals Ltd");
-            sectornames.Add("Materials");
-            sectornames.Add("Others");
-            sectornames.Add("Chemicals");
-            sectornames.Add("Energy");
-            sectornames.Add("Communication");
-            sectornames.Add("Consumer Discretionary");
-            sectornames.Add("Consumer Electricals Ltd");
-            sectornames.Add("Insurance");
+            
 
             ETRawDataModel eTRawDataModel = new ETRawDataModel();
 //            string[] sectorArray = sectors.Split(",");
@@ -278,7 +264,7 @@ namespace DailyTools
                 {
                     ++eTRawDataModel.TotalLines;
                     bool isExist = false;
-                    foreach (string item in sectornames)
+                    foreach (string item in SectorNames)
                     {
                         if (line.Contains(item))
                         {
