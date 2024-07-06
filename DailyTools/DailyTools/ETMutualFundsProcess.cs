@@ -41,24 +41,24 @@ namespace DailyTools
         public static void ProcessETMoneyData()
         {
             IList<MutualFund> mutualFunds = new List<MutualFund>();
-            mutualFunds.Add(new MutualFund { Name = MF_NIPPON, FileName = GetFilePath(DATA_ROOT_DIR, MF_NIPPON_FILENAME) });
-            mutualFunds.Add(new MutualFund { Name = MF_QUANT, FileName = GetFilePath(DATA_ROOT_DIR, MF_QUANT_FILENAME) });
-            mutualFunds.Add(new MutualFund { Name = MF_BANKOFINDIA, FileName = GetFilePath(DATA_ROOT_DIR, MF_BANKOFINDIA_FILENAME) });
-            mutualFunds.Add(new MutualFund { Name = MF_HSBC, FileName = GetFilePath(DATA_ROOT_DIR, MF_HSBC_FILENAME) });
-            mutualFunds.Add(new MutualFund { Name = MF_TATA, FileName = GetFilePath(DATA_ROOT_DIR, MF_TATA_FILENAME) });
-            mutualFunds.Add(new MutualFund { Name = MF_FRANKLIN, FileName = GetFilePath(DATA_ROOT_DIR, MF_FRANKLIN_FILENAME) });
-            mutualFunds.Add(new MutualFund { Name = MF_CANARAROBECO, FileName = GetFilePath(DATA_ROOT_DIR, MF_CANARAROBECO_FILENAME) });
-            mutualFunds.Add(new MutualFund { Name = MF_EDELWISE, FileName = GetFilePath(DATA_ROOT_DIR, MF_EDELWISE_FILENAME) });
-            mutualFunds.Add(new MutualFund { Name = MF_INVESCO, FileName = GetFilePath(DATA_ROOT_DIR, MF_INVESCO_FILENAME) });
-            mutualFunds.Add(new MutualFund { Name = MF_HDFC, FileName = GetFilePath(DATA_ROOT_DIR, MF_HDFC_FILENAME) });
-            mutualFunds.Add(new MutualFund { Name = MF_ICICIPRUDENTIAL, FileName = GetFilePath(DATA_ROOT_DIR, MF_ICICIPRUDENTIAL_FILENAME) });
-            mutualFunds.Add(new MutualFund { Name = MF_KOTAK, FileName = GetFilePath(DATA_ROOT_DIR, MF_KOTAK_FILENAME) });
-            mutualFunds.Add(new MutualFund { Name = MF_ADITYABIRLA, FileName = GetFilePath(DATA_ROOT_DIR, MF_ADITYABIRLA_FILENAME) });
-            mutualFunds.Add(new MutualFund { Name = MF_AXISBANK, FileName = GetFilePath(DATA_ROOT_DIR, MF_AXISBANK_FILENAME) });
-            mutualFunds.Add(new MutualFund { Name = MF_DSP, FileName = GetFilePath(DATA_ROOT_DIR, MF_DSP_FILENAME) });
-            mutualFunds.Add(new MutualFund { Name = MF_SBI, FileName = GetFilePath(DATA_ROOT_DIR, MF_SBI_FILENAME) });
-            mutualFunds.Add(new MutualFund { Name = MF_SUNDARAM, FileName = GetFilePath(DATA_ROOT_DIR, MF_SUNDARAM_FILENAME) });
-            mutualFunds.Add(new MutualFund { Name = MF_UNION, FileName = GetFilePath(DATA_ROOT_DIR, MF_UNION_FILENAME) });
+            mutualFunds.Add(new MutualFund { Name = MF_NIPPON, FileName = GetFilePath(SMALLCAP_DATA_ROOT_DIR, MF_NIPPON_FILENAME) });
+            mutualFunds.Add(new MutualFund { Name = MF_QUANT, FileName = GetFilePath(SMALLCAP_DATA_ROOT_DIR, MF_QUANT_FILENAME) });
+            mutualFunds.Add(new MutualFund { Name = MF_BANKOFINDIA, FileName = GetFilePath(SMALLCAP_DATA_ROOT_DIR, MF_BANKOFINDIA_FILENAME) });
+            mutualFunds.Add(new MutualFund { Name = MF_HSBC, FileName = GetFilePath(SMALLCAP_DATA_ROOT_DIR, MF_HSBC_FILENAME) });
+            mutualFunds.Add(new MutualFund { Name = MF_TATA, FileName = GetFilePath(SMALLCAP_DATA_ROOT_DIR, MF_TATA_FILENAME) });
+            mutualFunds.Add(new MutualFund { Name = MF_FRANKLIN, FileName = GetFilePath(SMALLCAP_DATA_ROOT_DIR, MF_FRANKLIN_FILENAME) });
+            mutualFunds.Add(new MutualFund { Name = MF_CANARAROBECO, FileName = GetFilePath(SMALLCAP_DATA_ROOT_DIR, MF_CANARAROBECO_FILENAME) });
+            mutualFunds.Add(new MutualFund { Name = MF_EDELWISE, FileName = GetFilePath(SMALLCAP_DATA_ROOT_DIR, MF_EDELWISE_FILENAME) });
+            mutualFunds.Add(new MutualFund { Name = MF_INVESCO, FileName = GetFilePath(SMALLCAP_DATA_ROOT_DIR, MF_INVESCO_FILENAME) });
+            mutualFunds.Add(new MutualFund { Name = MF_HDFC, FileName = GetFilePath(SMALLCAP_DATA_ROOT_DIR, MF_HDFC_FILENAME) });
+            mutualFunds.Add(new MutualFund { Name = MF_ICICIPRUDENTIAL, FileName = GetFilePath(SMALLCAP_DATA_ROOT_DIR, MF_ICICIPRUDENTIAL_FILENAME) });
+            mutualFunds.Add(new MutualFund { Name = MF_KOTAK, FileName = GetFilePath(SMALLCAP_DATA_ROOT_DIR, MF_KOTAK_FILENAME) });
+            mutualFunds.Add(new MutualFund { Name = MF_ADITYABIRLA, FileName = GetFilePath(SMALLCAP_DATA_ROOT_DIR, MF_ADITYABIRLA_FILENAME) });
+            mutualFunds.Add(new MutualFund { Name = MF_AXISBANK, FileName = GetFilePath(SMALLCAP_DATA_ROOT_DIR, MF_AXISBANK_FILENAME) });
+            mutualFunds.Add(new MutualFund { Name = MF_DSP, FileName = GetFilePath(SMALLCAP_DATA_ROOT_DIR, MF_DSP_FILENAME) });
+            mutualFunds.Add(new MutualFund { Name = MF_SBI, FileName = GetFilePath(SMALLCAP_DATA_ROOT_DIR, MF_SBI_FILENAME) });
+            mutualFunds.Add(new MutualFund { Name = MF_SUNDARAM, FileName = GetFilePath(SMALLCAP_DATA_ROOT_DIR, MF_SUNDARAM_FILENAME) });
+            mutualFunds.Add(new MutualFund { Name = MF_UNION, FileName = GetFilePath(SMALLCAP_DATA_ROOT_DIR, MF_UNION_FILENAME) });
 
             foreach (var fund in mutualFunds)
             {
