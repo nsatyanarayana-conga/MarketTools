@@ -23,7 +23,7 @@ namespace DailyTools
             SectorNames.Add("Consumer Staples");
             SectorNames.Add("Textiles");
             SectorNames.Add("Technology");
-            SectorNames.Add("Metals");
+            //SectorNames.Add("Metals");
             SectorNames.Add("Pharmaceuticals");
             SectorNames.Add("Chemicals Ltd");
             SectorNames.Add("Materials");
@@ -34,6 +34,7 @@ namespace DailyTools
             SectorNames.Add("Consumer Discretionary");
             SectorNames.Add("Consumer Electricals Ltd");
             SectorNames.Add("Insurance");
+            SectorNames.Add("Metals & Mining");
         }
 
 
@@ -69,15 +70,38 @@ namespace DailyTools
 
             //GenerateReport(mutualFunds);
             //GenerateReportFundWise(mutualFunds);
-            //GenerateSectorReport(mutualFunds);
+            GenerateSectorReport(mutualFunds);
+
+            
+
+        }
+
+        private static void SectorDisplay(IList<MutualFund> mutualFunds)
+        {
+            List<string> sss = new List<string>();
+            foreach (var fund in mutualFunds)
+            {
+                fund.Stocks.ToList().ForEach(st => {
+
+                    if (!sss.Contains(st.Sector))
+                    {
+                        sss.Add(st.Sector);
+                    }
+
+                });
 
 
+            }
 
+            foreach (var item in sss)
+            {
+                Console.WriteLine($"SectorNames.Add(\"{item}\");");
+            }
         }
 
         private static void GenerateSectorReport(IList<MutualFund> mutualFunds)
         {
-            foreach (var sectorName in SectorNames)
+            foreach (string sectorName in SectorNames)
             {
                 IDictionary<string, Stock> stockMap = new Dictionary<string, Stock>();
                 List<Stock> sectorStocks = new List<Stock>();
@@ -107,7 +131,14 @@ namespace DailyTools
                 {
                     Directory.CreateDirectory(dir_path);
                 }
-                string output = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), @$"Sector\{sectorName}_report.txt");
+
+                string sector_name = sectorName;
+                if (sectorName.Contains("&"))
+                {
+                    sector_name = sectorName.Replace("&", "_");
+                }
+
+                string output = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), @$"Sector\{sector_name}_report.txt");
                 if (File.Exists(output))
                 {
                     File.Delete(output);
