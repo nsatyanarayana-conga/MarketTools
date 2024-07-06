@@ -34,15 +34,40 @@ namespace DailyTools
             {
                 fund.RawDataModel = ProcessETRawDataModel(fund.FileName);
                 fund.Stocks = GetStocksFromProcessedData(fund.RawDataModel);
-
                 //Console.WriteLine($"Total Count {fund.RawDataModel.TotalLines}, Processed {fund.RawDataModel.ProcessedLines} and  failed is {fund.RawDataModel.UnProcessedLines}");
                 //Console.WriteLine($"Number of stocks  {fund.Stocks.Count}");
             }
 
             //GenerateReport(mutualFunds);
             //GenerateReportFundWise(mutualFunds);
-            string sctorName = "Capital Goods";
-            GenerateSectorReport(mutualFunds, sctorName);
+            //string sctorName = "Healthcare";
+            IList<string> sectornames = new List<string>();
+            sectornames.Add("Capital Goods");
+            sectornames.Add("Financial");
+            sectornames.Add("Automobile");
+            sectornames.Add("Diversified");
+            sectornames.Add("Construction");
+            sectornames.Add("Services");
+            sectornames.Add("Healthcare");
+            sectornames.Add("Consumer Staples");
+            sectornames.Add("Textiles");
+            sectornames.Add("Technology");
+            sectornames.Add("Metals");
+            sectornames.Add("Pharmaceuticals");
+            sectornames.Add("Chemicals Ltd");
+            sectornames.Add("Materials");
+            sectornames.Add("Others");
+            sectornames.Add("Chemicals");
+            sectornames.Add("Energy");
+            sectornames.Add("Communication");
+            sectornames.Add("Consumer Discretionary");
+            sectornames.Add("Consumer Electricals Ltd");
+            sectornames.Add("Insurance");
+
+            foreach (var sctorName in sectornames)
+            {
+                GenerateSectorReport(mutualFunds, sctorName);
+            }
 
         }
 
@@ -214,10 +239,33 @@ namespace DailyTools
 
         private static ETRawDataModel ProcessETRawDataModel(string filePath)
         {
-            string sectors = "Capital Goods,Financial,Automobile,Diversified,Construction,Services,Healthcare,Consumer Staples,Textiles,Technology,Metals, Pharmaceuticals,Chemicals Ltd,Materials, Others";
+            //string sectors = "Capital Goods,Financial,Automobile,Diversified,Construction,Services,Healthcare,Consumer Staples,Textiles,Technology,Metals, Pharmaceuticals,Chemicals Ltd,Materials, Others";
+
+            IList<string> sectornames = new List<string>();
+            sectornames.Add("Capital Goods");
+            sectornames.Add("Financial");
+            sectornames.Add("Automobile");
+            sectornames.Add("Diversified");
+            sectornames.Add("Construction");
+            sectornames.Add("Services");
+            sectornames.Add("Healthcare");
+            sectornames.Add("Consumer Staples");
+            sectornames.Add("Textiles");
+            sectornames.Add("Technology");
+            sectornames.Add("Metals");
+            sectornames.Add("Pharmaceuticals");
+            sectornames.Add("Chemicals Ltd");
+            sectornames.Add("Materials");
+            sectornames.Add("Others");
+            sectornames.Add("Chemicals");
+            sectornames.Add("Energy");
+            sectornames.Add("Communication");
+            sectornames.Add("Consumer Discretionary");
+            sectornames.Add("Consumer Electricals Ltd");
+            sectornames.Add("Insurance");
 
             ETRawDataModel eTRawDataModel = new ETRawDataModel();
-            string[] sectorArray = sectors.Split(",");
+//            string[] sectorArray = sectors.Split(",");
 
             string fileName = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), filePath);
 
@@ -230,7 +278,7 @@ namespace DailyTools
                 {
                     ++eTRawDataModel.TotalLines;
                     bool isExist = false;
-                    foreach (string item in sectorArray)
+                    foreach (string item in sectornames)
                     {
                         if (line.Contains(item))
                         {

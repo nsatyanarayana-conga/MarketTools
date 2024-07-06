@@ -34,7 +34,7 @@ namespace DailyTools
         public static string MF_EDELWISE = "Edelwise";
         public static string MF_EDELWISE_FILENAME = "edelwise_smallcap.txt";
 
-        public static string MF_INVESCO = "invesco";
+        public static string MF_INVESCO = "Invesco";
         public static string MF_INVESCO_FILENAME = "invesco_smallcap.txt";
 
         public static string MF_HDFC = "Hdfc";
