@@ -12,6 +12,15 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="IndexData\NiftySmallCap_100.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="IndexData\NiftySmallCap_250.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="IndexData\NiftySmallCap_50.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="StockData\SmallCap\bankofindia_smallcap.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

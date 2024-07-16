@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 using System.Reflection;
+using DailyTools.Interface;
 
 namespace DailyTools.Services
 {
@@ -15,9 +16,12 @@ namespace DailyTools.Services
         public  bool UseTabSeperator = false;
         private IList<string> SectorNames;
         private IList<MutualFund> mutualFunds;
+        private IIndexService indexService;
 
         public ETMoneyMutualFundService(bool useTabSeperator)
         {
+            indexService = new IndexService();
+
             UseTabSeperator = useTabSeperator;
             mutualFunds = new List<MutualFund>();
             SectorNames = new List<string>();
@@ -116,7 +120,6 @@ namespace DailyTools.Services
 
                     foreach (var stock in sectors.ToList())
                     {
-
                         if (!stockMap.ContainsKey(stock.CompanyName))
                         {
                             stockMap[stock.CompanyName] = stock;

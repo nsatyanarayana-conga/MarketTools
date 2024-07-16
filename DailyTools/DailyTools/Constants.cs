@@ -1,11 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace DailyTools
+﻿namespace DailyTools
 {
+
+    public static class IndexConstants
+    {
+        public static string INDEX_DATA_ROOT_DIR = "IndexData";
+
+        public static string NIFTY_SMALLCAP_50 = "NiftySmallCap_50.csv";
+        public static string NIFTY_SMALLCAP_100 = "NiftySmallCap_100.csv";
+        public static string NIFTY_SMALLCAP_250 = "NiftySmallCap_250.csv";
+    }
+
     public static class Constants
     {
         public static string SMALLCAP_DATA_ROOT_DIR = "StockData\\SmallCap";
@@ -66,7 +70,7 @@ namespace DailyTools
 
         public static string GetFilePath(string dir, string filename)
         {
-            return $"{dir}//{filename}";
+            return $"{dir}\\{filename}";
         }
     }
 }
